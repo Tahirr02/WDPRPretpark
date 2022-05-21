@@ -20,6 +20,7 @@ namespace WdprPretparkDenhaag
           var builder = CreateHostBuilder(args).Build();
            using (var scope = builder.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
+                
                 Attractie attractie = new Attractie();
                 attractie.Naam = "tahir";
                 attractie.AngstFactor = 2;
@@ -31,6 +32,7 @@ namespace WdprPretparkDenhaag
                 
                 
             }
+            
           builder.Run();
             
             
