@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WdprPretparkDenhaag.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +25,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WdprPretparkDenhaag.Models;
+using WdprPretparkDenhaag.Areas.Identity.Data;
 
 namespace WdprPretparkDenhaag
 {
@@ -42,21 +42,14 @@ namespace WdprPretparkDenhaag
         public void ConfigureServices(IServiceCollection services)
         {
             
-            services.AddDbContext<PretparkContext>(options =>
+            services.AddDbContext<WdprPretparkDenhaagIdentityDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
                      services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddSignalR();
 
-            services.AddDefaultIdentity<ApplicationUser>(options =>
-            {
-                options.SignIn.RequireConfirmedAccount = true;
-                options.SignIn.RequireConfirmedEmail = true;
-            })
-            .AddRoles<IdentityRole>()
-            .AddRoleManager<RoleManager<IdentityRole>>()
-            .AddEntityFrameworkStores<PretparkContext>();
+            
             services.AddControllersWithViews();
 
             // services.AddDatabaseDeveloperPageExceptionFilter();

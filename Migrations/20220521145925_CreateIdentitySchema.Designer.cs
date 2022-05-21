@@ -5,11 +5,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WdprPretparkDenhaag.Data;
+using WdprPretparkDenhaag.Areas.Identity.Data;
+
 
 namespace WdprPretparkDenhaag.Migrations
 {
-    [DbContext(typeof(PretparkContext))]
+    [DbContext(typeof(WdprPretparkDenhaagIdentityDbContext))]
     [Migration("20220521145925_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {

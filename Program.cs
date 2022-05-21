@@ -8,7 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using WdprPretparkDenhaag.Data;
+using WdprPretparkDenhaag.Areas.Identity.Data;
+
 
 namespace WdprPretparkDenhaag
 {
@@ -22,9 +23,9 @@ namespace WdprPretparkDenhaag
             {
                 
                 Attractie attractie = new Attractie();
-                attractie.Naam = "tahir";
+                attractie.Naam = "mo";
                 attractie.AngstFactor = 2;
-                var roleManager = scope.ServiceProvider.GetRequiredService<PretparkContext>();
+                var roleManager = scope.ServiceProvider.GetRequiredService<WdprPretparkDenhaagIdentityDbContext>();
                 roleManager.Attracties.Add(attractie);
                 roleManager.SaveChanges();
                
