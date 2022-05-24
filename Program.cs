@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity;
 using WdprPretparkDenhaag.Areas.Identity.Data;
 
 
@@ -21,13 +22,20 @@ namespace WdprPretparkDenhaag
           var builder = CreateHostBuilder(args).Build();
            using (var scope = builder.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
-                
-                Attractie attractie = new Attractie();
-                attractie.Naam = "mo";
-                attractie.AngstFactor = 2;
-                var roleManager = scope.ServiceProvider.GetRequiredService<WdprPretparkDenhaagIdentityDbContext>();
-                roleManager.Attracties.Add(attractie);
-                roleManager.SaveChanges();
+
+                using (var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>())
+                {
+                    var roles = new string[] { "Admin", "Bezoeker", "mohamed" };
+                    foreach (var role in roles)
+                        if (!roleManager.RoleExistsAsync(role).Result)
+                            roleManager.CreateAsync(new IdentityRole(role)).Wait();
+                }
+                // Attractie attractie = new Attractie();
+                // attractie.Naam = "mo";
+                // attractie.AngstFactor = 2;
+                // var roleManager = scope.ServiceProvider.GetRequiredService<WdprPretparkDenhaagIdentityDbContext>();
+                // roleManager.Attracties.Add(attractie);
+                // roleManager.SaveChanges();
                
                 
                 

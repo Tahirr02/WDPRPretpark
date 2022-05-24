@@ -20,6 +20,8 @@ namespace WdprPretparkDenhaag.Areas.Identity
                         context.Configuration.GetConnectionString("DefaultConnection")));
 
                 services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                     .AddRoles<IdentityRole>()
+            .AddRoleManager<RoleManager<IdentityRole>>()
                     .AddEntityFrameworkStores<WdprPretparkDenhaagIdentityDbContext>();
             });
         }
