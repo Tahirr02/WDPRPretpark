@@ -11,22 +11,8 @@
             "port": 1433,
             "askForPassword": true,
             "driver": "MSSQL",
-            "name": "DenhaagWdpr",
-            "connectString": "workstation id=DenhaagPretpark.mssql.somee.com;packet size=4096;user id=Starace_SQLLogin_1;pwd=aa46wod9mi;data source=DenhaagPretpark.mssql.somee.com;persist security info=False;initial catalog=DenhaagPretpark"
-        },
-        {
-            "mssqlOptions": {
-                "appName": "SQLTools",
-                "useUTC": true,
-                "encrypt": true
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 1433,
-            "askForPassword": true,
-            "driver": "MSSQL",
-            "connectString": "workstation id=WDPR20411.mssql.somee.com;packet size=4096;user id=Starace_SQLLogin_1;pwd=aa46wod9mi;data source=WDPR20411.mssql.somee.com;persist security info=False;initial catalog=WDPR20411",
-            "name": "1DenhaagPretpark"
+            "connectString": "workstation id=12WDPRpretpark.mssql.somee.com;packet size=4096;user id=Starace_SQLLogin_1;pwd=aa46wod9mi;data source=12WDPRpretpark.mssql.somee.com;persist security info=False;initial catalog=12WDPRpretpark",
+            "name": "12WDPR"
         }
     ]
 }

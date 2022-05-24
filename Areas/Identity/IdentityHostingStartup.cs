@@ -17,7 +17,7 @@ namespace WdprPretparkDenhaag.Areas.Identity
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<WdprPretparkDenhaagIdentityDbContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("WdprPretparkDenhaagIdentityDbContextConnection")));
+                        context.Configuration.GetConnectionString("DefaultConnection")));
 
                 services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<WdprPretparkDenhaagIdentityDbContext>();
