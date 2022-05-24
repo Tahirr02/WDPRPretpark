@@ -51,6 +51,8 @@ namespace WdprPretparkDenhaag
 
             
             services.AddControllersWithViews();
+              services.AddTransient<IEmailSender, EmailSender>();
+          
 
             // services.AddDatabaseDeveloperPageExceptionFilter();
         }
