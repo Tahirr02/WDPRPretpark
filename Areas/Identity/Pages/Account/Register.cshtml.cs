@@ -13,6 +13,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using WdprPretparkDenhaag.Models;
+using WdprPretparkDenhaag.Areas.Identity.Data;
 
 namespace WdprPretparkDenhaag.Areas.Identity.Pages.Account
 {
@@ -23,16 +25,19 @@ namespace WdprPretparkDenhaag.Areas.Identity.Pages.Account
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly  WdprPretparkDenhaagIdentityDbContext _context;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
+            WdprPretparkDenhaagIdentityDbContext context,
             IEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
+            _context = context;
             _emailSender = emailSender;
         }
 
@@ -74,18 +79,34 @@ namespace WdprPretparkDenhaag.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
-                var result = await _userManager.CreateAsync(user, Input.Password);
-                if (result.Succeeded)
-                {
+               
+                //var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+                //var result = await _userManager.CreateAsync(user, Input.Password);
+                //if (result.Succeeded)
+
+                //{
+                    
+                     //var bezoeker = await _userManager.FindByIdAsync(Input.BezoekerId);
+                     var client = new ApplicationUser{
+                    UserName = Input.Email,
+                    Email = Input.Email//,
+                    //id = "34343434"
+                    //Bezoeker = bezoeker
+                    };
+                    
+                    var result = await _userManager.CreateAsync(client, Input.Password);
+                    if(result.Succeeded)
+                    {
+                            await _userManager.AddToRoleAsync(client, "Bezoeker");
+                    await _context.SaveChangesAsync();
                     _logger.LogInformation("User created a new account with password.");
 
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(client);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
                         "/Account/ConfirmEmail",
                         pageHandler: null,
-                        values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
+                        values: new { area = "Identity", userId = client.Id, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
@@ -97,14 +118,17 @@ namespace WdprPretparkDenhaag.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        await _signInManager.SignInAsync(client, isPersistent: false);
                         return LocalRedirect(returnUrl);
                     }
-                }
-                foreach (var error in result.Errors)
+                //}
+               
+                    }
+                     foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
+                    
             }
 
             // If we got this far, something failed, redisplay form

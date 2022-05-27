@@ -15,6 +15,8 @@ namespace WdprPretparkDenhaag.Models
         public ICollection<Bezoeker> Bezoekers { get; set; }
          public ICollection<Planning> Planningen { get; set; }
          public ICollection<Tijdslot> Tijdsloten { get; set; }
+                 public string BezoekerId { get; set; }
+        public ApplicationUser Bezoeker { get; set; }
         public ApplicationUser()
         {
             // Children = new List<ApplicationUser>();
