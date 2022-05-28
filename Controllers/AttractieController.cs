@@ -6,9 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WdprPretparkDenhaag.Areas.Identity.Data;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WdprPretparkDenhaag.Controllers
 {
+    // alleen admin mag attracties aanmaken, bewerken en verwijderen.
+    [Authorize(Roles = "Admin")]
     public class AttractieController : Controller
     {
         private readonly WdprPretparkDenhaagIdentityDbContext _context;
