@@ -189,3 +189,9 @@ C:\Users\Tahir\OneDrive\Bureaublad\WdprPretparkDenhaag\obj\Debug\net5.0\Razor\Ar
 C:\Users\Tahir\OneDrive\Bureaublad\WdprPretparkDenhaag\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Tahir\OneDrive\Bureaublad\WdprPretparkDenhaag\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Tahir\OneDrive\Bureaublad\WdprPretparkDenhaag\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\Tahir\OneDrive\Bureaublad\WdprPretparkDenhaag\obj\Debug\net5.0\Razor\Views\PlanningTest\Index.cshtml.g.cs
+C:\Users\Tahir\OneDrive\Bureaublad\WdprPretparkDenhaag\obj\Debug\net5.0\Razor\Views\Planning\Create.cshtml.g.cs
+C:\Users\Tahir\OneDrive\Bureaublad\WdprPretparkDenhaag\obj\Debug\net5.0\Razor\Views\Planning\Delete.cshtml.g.cs
+C:\Users\Tahir\OneDrive\Bureaublad\WdprPretparkDenhaag\obj\Debug\net5.0\Razor\Views\Planning\Details.cshtml.g.cs
+C:\Users\Tahir\OneDrive\Bureaublad\WdprPretparkDenhaag\obj\Debug\net5.0\Razor\Views\Planning\Edit.cshtml.g.cs
+C:\Users\Tahir\OneDrive\Bureaublad\WdprPretparkDenhaag\obj\Debug\net5.0\Razor\Views\Planning\Index.cshtml.g.cs

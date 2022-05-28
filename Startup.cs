@@ -41,20 +41,26 @@ namespace WdprPretparkDenhaag
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            services.AddDbContext<WdprPretparkDenhaagIdentityDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+             services.AddDbContext<WdprPretparkDenhaagIdentityDbContext>(options =>
+                options.UseSqlServer( Configuration.GetConnectionString("DefaultConnection")));
                      services.AddDatabaseDeveloperPageExceptionFilter();
 
+           
             services.AddSignalR();
-
+            
+services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                     .AddRoles<IdentityRole>()
+            .AddRoleManager<RoleManager<IdentityRole>>()
+                    .AddEntityFrameworkStores<WdprPretparkDenhaagIdentityDbContext>();
             
             services.AddControllersWithViews();
               services.AddTransient<IEmailSender, EmailSender>();
           
 
             // services.AddDatabaseDeveloperPageExceptionFilter();
+            
+                     
+
         }
 
 
