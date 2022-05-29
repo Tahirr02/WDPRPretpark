@@ -1,0 +1,37 @@
+@model KaartViewModel
+
+@{
+    ViewData["Title"] = "Kaart titel";
+}
+
+<h1>Kies een activiteit</h1>
+    
+    @Html.DropDownList("Attractie", new SelectList(Model.Attracties.Select(k => k.Naam)), "Kies Attractie")
+    @Html.DropDownList("Tijdslot", new SelectList(Model.Tijdsloten.Select(k => k.EindTijd)), "Kies Tijdslot")   
+
+<h2>Huidige planning</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Attractie</th>
+        </tr>
+        <tr>
+            <th>Tijdslot</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.PlanningItems)
+        {
+            <tr>
+                <td>                    
+                    @Html.DisplayFor(modelItem => item.AttractieId)
+                </td>
+                <td>                    
+                    @Html.DisplayFor(modelItem => item.TijdSlotId)
+                </td>
+            </tr>
+        }
+    </tbody>    
+
+</table>
