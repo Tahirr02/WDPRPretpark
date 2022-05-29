@@ -9,6 +9,7 @@ using WdprPretparkDenhaag.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using WdprPretparkDenhaag.Models;
 
 namespace WdprPretparkDenhaag.Controllers
 {

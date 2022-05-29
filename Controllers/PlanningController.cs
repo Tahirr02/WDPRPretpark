@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WdprPretparkDenhaag.Areas.Identity.Data;
+using WdprPretparkDenhaag.Models;
 
 namespace WdprPretparkDenhaag.Controllers
 {
