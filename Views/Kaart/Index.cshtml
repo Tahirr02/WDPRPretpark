@@ -9,6 +9,13 @@
     @Html.DropDownList("Attractie", new SelectList(Model.Attracties.Select(k => k.Naam)), "Kies Attractie")
     @Html.DropDownList("Tijdslot", new SelectList(Model.Tijdsloten.Select(k => k.EindTijd)), "Kies Tijdslot")   
 
+    <span>
+        <a class="btn btn-primary" asp-controller="Kaart" asp-action="VoegToe"
+            asp-route-id="" title="Voeg planning item toe" aria-label=""><i
+            class="fas fa-id-card"></i>Voeg toe</a>   
+
+    </span>
+
 <h2>Huidige planning</h2>
 
 <table>

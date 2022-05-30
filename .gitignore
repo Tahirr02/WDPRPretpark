@@ -33,3 +33,6 @@ bin/Debug/net5.0/ref/WdprPretparkDenhaag.dll
 12WDPR.session.sql
 Migrations/20220529145844_migratieDatabasescaffold124lljjktytyuhkhkujygtjygtjytjyjfjyfyjk.cs
 Migrations/20220529145844_migratieDatabasescaffold124lljjktytyuhkhkujygtjygtjytjyjfjyfyjk.Designer.cs
+obj/Debug/net5.0/Razor/Views/Kaart/Index.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Kaart/Index.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Kaart/Index.cshtml.g.cs

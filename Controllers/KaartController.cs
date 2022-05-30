@@ -28,5 +28,11 @@ namespace WdprPretparkDenhaag.Controllers
           
             return View(kaartViewModel);
         }
+
+        
+        public async Task<IActionResult> VoegToe(string returnUrl = null)
+        {
+            return View();
+        }  
     }    
 }
