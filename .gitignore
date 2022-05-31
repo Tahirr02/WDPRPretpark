@@ -36,3 +36,5 @@ Migrations/20220529145844_migratieDatabasescaffold124lljjktytyuhkhkujygtjygtjytj
 obj/Debug/net5.0/Razor/Views/Kaart/Index.cshtml.g.cs
 obj/Debug/net5.0/Razor/Views/Kaart/Index.cshtml.g.cs
 obj/Debug/net5.0/Razor/Views/Kaart/Index.cshtml.g.cs
+Migrations/20220531180746_initialmigration.cs
+Migrations/20220531180746_initialmigration.Designer.cs
