@@ -16,6 +16,7 @@ namespace WdprPretparkDenhaag.Areas.Identity.Data
         public DbSet<Bezoeker> Bezoekers { get; set; }
         public DbSet<Planning> Planningen { get; set; }
         public DbSet<Tijdslot> Tijdsloten { get; set; }
+        public DbSet<PlanningItem> PlanningItems {get; set;}
         public WdprPretparkDenhaagIdentityDbContext(DbContextOptions<WdprPretparkDenhaagIdentityDbContext> options)
             : base(options)
         {
