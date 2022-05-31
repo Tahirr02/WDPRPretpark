@@ -11,8 +11,8 @@
             "port": 1433,
             "askForPassword": true,
             "driver": "MSSQL",
-            "name": "123WDPR",
-            "connectString": "workstation id=123WDPR.mssql.somee.com;packet size=4096;user id=Starace_SQLLogin_1;pwd=aa46wod9mi;data source=123WDPR.mssql.somee.com;persist security info=False;initial catalog=123WDPR"
+            "name": "1234WDPR",
+            "connectString": "workstation id=1234WDPR.mssql.somee.com;packet size=4096;user id=Starace_SQLLogin_1;pwd=aa46wod9mi;data source=1234WDPR.mssql.somee.com;persist security info=False;initial catalog=1234WDPR"
         }
     ]
 }

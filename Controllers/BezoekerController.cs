@@ -10,22 +10,22 @@ using WdprPretparkDenhaag.Models;
 
 namespace WdprPretparkDenhaag.Controllers
 {
-    public class PlanningController : Controller
+    public class BezoekerController : Controller
     {
         private readonly WdprPretparkDenhaagIdentityDbContext _context;
 
-        public PlanningController(WdprPretparkDenhaagIdentityDbContext context)
+        public BezoekerController(WdprPretparkDenhaagIdentityDbContext context)
         {
             _context = context;
         }
 
-        // GET: Planning
+        // GET: Bezoeker
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Planningen.ToListAsync());
+            return View(await _context.Bezoekers.ToListAsync());
         }
 
-        // GET: Planning/Details/5
+        // GET: Bezoeker/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -33,40 +33,40 @@ namespace WdprPretparkDenhaag.Controllers
                 return NotFound();
             }
 
-            var planning = await _context.Planningen
+            var bezoeker = await _context.Bezoekers
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (planning == null)
+            if (bezoeker == null)
             {
                 return NotFound();
             }
 
-            return View(planning);
+            return View(bezoeker);
         }
 
-        // GET: Planning/Create
+        // GET: Bezoeker/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Planning/Create
+        // POST: Bezoeker/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Dag,TotaleKosten,BezoekersId")] Planning planning)
+        public async Task<IActionResult> Create([Bind("Voornaam,Achternaam,Id,Email")] Bezoeker bezoeker)
         {
             if (ModelState.IsValid)
             {
-                planning.Id = Guid.NewGuid();
-                _context.Add(planning);
+                bezoeker.Id = Guid.NewGuid();
+                _context.Add(bezoeker);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(planning);
+            return View(bezoeker);
         }
 
-        // GET: Planning/Edit/5
+        // GET: Bezoeker/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -74,22 +74,22 @@ namespace WdprPretparkDenhaag.Controllers
                 return NotFound();
             }
 
-            var planning = await _context.Planningen.FindAsync(id);
-            if (planning == null)
+            var bezoeker = await _context.Bezoekers.FindAsync(id);
+            if (bezoeker == null)
             {
                 return NotFound();
             }
-            return View(planning);
+            return View(bezoeker);
         }
 
-        // POST: Planning/Edit/5
+        // POST: Bezoeker/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Dag,TotaleKosten,BezoekersId")] Planning planning)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Voornaam,Achternaam,Id,Email")] Bezoeker bezoeker)
         {
-            if (id != planning.Id)
+            if (id != bezoeker.Id)
             {
                 return NotFound();
             }
@@ -98,12 +98,12 @@ namespace WdprPretparkDenhaag.Controllers
             {
                 try
                 {
-                    _context.Update(planning);
+                    _context.Update(bezoeker);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PlanningExists(planning.Id))
+                    if (!BezoekerExists(bezoeker.Id))
                     {
                         return NotFound();
                     }
@@ -114,10 +114,10 @@ namespace WdprPretparkDenhaag.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(planning);
+            return View(bezoeker);
         }
 
-        // GET: Planning/Delete/5
+        // GET: Bezoeker/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -125,30 +125,30 @@ namespace WdprPretparkDenhaag.Controllers
                 return NotFound();
             }
 
-            var planning = await _context.Planningen
+            var bezoeker = await _context.Bezoekers
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (planning == null)
+            if (bezoeker == null)
             {
                 return NotFound();
             }
 
-            return View(planning);
+            return View(bezoeker);
         }
 
-        // POST: Planning/Delete/5
+        // POST: Bezoeker/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var planning = await _context.Planningen.FindAsync(id);
-            _context.Planningen.Remove(planning);
+            var bezoeker = await _context.Bezoekers.FindAsync(id);
+            _context.Bezoekers.Remove(bezoeker);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PlanningExists(Guid id)
+        private bool BezoekerExists(Guid id)
         {
-            return _context.Planningen.Any(e => e.Id == id);
+            return _context.Bezoekers.Any(e => e.Id == id);
         }
     }
 }

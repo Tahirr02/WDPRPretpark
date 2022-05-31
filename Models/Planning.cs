@@ -12,7 +12,7 @@ namespace WdprPretparkDenhaag.Models
         public DateTime Dag { get; set; }
         public double TotaleKosten { get; set; }
     public List<Attractie> AttractieLijst { get; set; }
-    public int BezoekersId { get; set; }
+    public Guid BezoekersId { get; set; }
         
 
     }

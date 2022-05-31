@@ -4,18 +4,47 @@
     ViewData["Title"] = "Kaart titel";
 }
 
+<form asp-controller="Kaart" asp-action="Index">
+    <p>
+        Attractie naam: <input type="text" name="attractieSearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <h1>Kies een activiteit</h1>
-    
-    @Html.DropDownList("Attractie", new SelectList(Model.Attracties.Select(k => k.Naam)), "Kies Attractie")
-    @Html.DropDownList("Tijdslot", new SelectList(Model.Tijdsloten.Select(k => k.EindTijd)), "Kies Tijdslot")   
 
-    <span>
-        <a class="btn btn-primary" asp-controller="Kaart" asp-action="VoegToe"
-            asp-route-id="" title="Voeg planning item toe" aria-label=""><i
-            class="fas fa-id-card"></i>Voeg toe</a>   
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Attracties.FirstOrDefault().Naam)
+            </th>            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Attracties) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naam)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
 
-    </span>
+    @using (Html.BeginForm("VoegToe", "Kaart", FormMethod.Post))
+    {
+        @Html.DropDownList("AttractieId", new SelectList(Model.Attracties.Select(k => k.Id)), "Kies Attractie")
+        @Html.DropDownList("TijdslotId", new SelectList(Model.Tijdsloten.Select(k => k.Id)), "Kies Tijdslot")   
 
+        <input id="VoegToe" type="submit" value="Voeg planning item toe" />
+    }
 <h2>Huidige planning</h2>
 
 <table>
