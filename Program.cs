@@ -40,21 +40,21 @@ namespace WdprPretparkDenhaag
 
                 //Dit is om tijdssloten aan te maken
 
-                for (int i = 0; i < 36; i++)
-               {
-                   DateTime date = new DateTime(2000, 1, 1, 9, 0, 0);
+            //     for (int i = 0; i < 36; i++)
+            //    {
+            //        DateTime date = new DateTime(2000, 1, 1, 9, 0, 0);
                                       
-                   int minutes = i * 15;
-                    Tijdslot tijdslot = new Tijdslot();
-                    tijdslot.BeginTijd = date.AddMinutes(minutes);
-                    tijdslot.EindTijd = tijdslot.BeginTijd.AddMinutes(15);
-                    tijdslot.AantalMensen = 10;
-                    tijdslot.Duur = 15;
-                    var dbcontext = scope.ServiceProvider.GetRequiredService<WdprPretparkDenhaagIdentityDbContext>();
+            //        int minutes = i * 15;
+            //         Tijdslot tijdslot = new Tijdslot();
+            //         tijdslot.BeginTijd = date.AddMinutes(minutes);
+            //         tijdslot.EindTijd = tijdslot.BeginTijd.AddMinutes(15);
+            //         tijdslot.AantalMensen = 10;
+            //         tijdslot.Duur = 15;
+            //         var dbcontext = scope.ServiceProvider.GetRequiredService<WdprPretparkDenhaagIdentityDbContext>();
                                         
-                    dbcontext.Tijdsloten.Add(tijdslot);
-                    dbcontext.SaveChanges();
-               }
+            //         dbcontext.Tijdsloten.Add(tijdslot);
+            //         dbcontext.SaveChanges();
+            //    }
                
                 
                 

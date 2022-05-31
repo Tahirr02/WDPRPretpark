@@ -225,9 +225,6 @@ namespace WdprPretparkDenhaag.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("AantalKerenPerDag")
-                        .HasColumnType("int");
-
                     b.Property<int>("AantalLikes")
                         .HasColumnType("int");
 
@@ -252,18 +249,16 @@ namespace WdprPretparkDenhaag.Migrations
                     b.Property<DateTime>("OpeningsTijd")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("PlanningId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<double>("Prijs")
                         .HasColumnType("float");
+
+                    b.Property<int>("Reserveercapaciteit")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("SluitingsTijd")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PlanningId");
 
                     b.ToTable("Attracties");
                 });
@@ -317,6 +312,9 @@ namespace WdprPretparkDenhaag.Migrations
                     b.Property<Guid>("AttractieId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<DateTime>("Dag")
+                        .HasColumnType("datetime2");
+
                     b.Property<Guid>("PlanningId")
                         .HasColumnType("uniqueidentifier");
 
@@ -334,30 +332,13 @@ namespace WdprPretparkDenhaag.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("AantalMensen")
-                        .HasColumnType("int");
-
-                    b.Property<Guid?>("AttractieId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("BeginTijd")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("Capaciteit")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Duur")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("EindTijd")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("IsVolgeboekt")
-                        .HasColumnType("bit");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("AttractieId");
 
                     b.ToTable("Tijdsloten");
                 });
@@ -411,30 +392,6 @@ namespace WdprPretparkDenhaag.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("WdprPretparkDenhaag.Models.Attractie", b =>
-                {
-                    b.HasOne("WdprPretparkDenhaag.Models.Planning", null)
-                        .WithMany("AttractieLijst")
-                        .HasForeignKey("PlanningId");
-                });
-
-            modelBuilder.Entity("WdprPretparkDenhaag.Models.Tijdslot", b =>
-                {
-                    b.HasOne("WdprPretparkDenhaag.Models.Attractie", null)
-                        .WithMany("TijdsSloten")
-                        .HasForeignKey("AttractieId");
-                });
-
-            modelBuilder.Entity("WdprPretparkDenhaag.Models.Attractie", b =>
-                {
-                    b.Navigation("TijdsSloten");
-                });
-
-            modelBuilder.Entity("WdprPretparkDenhaag.Models.Planning", b =>
-                {
-                    b.Navigation("AttractieLijst");
                 });
 #pragma warning restore 612, 618
         }

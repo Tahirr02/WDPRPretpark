@@ -37,13 +37,13 @@
                 @Html.DisplayNameFor(model => model.Inschrijfplicht)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AantalKerenPerDag)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.OpeningsTijd)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.SluitingsTijd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserveercapaciteit)
             </th>
             <th></th>
         </tr>
@@ -76,13 +76,13 @@
                 @Html.DisplayFor(modelItem => item.Inschrijfplicht)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AantalKerenPerDag)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.OpeningsTijd)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SluitingsTijd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reserveercapaciteit)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

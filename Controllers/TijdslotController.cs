@@ -10,22 +10,22 @@ using WdprPretparkDenhaag.Models;
 
 namespace WdprPretparkDenhaag.Controllers
 {
-    public class AttractieController : Controller
+    public class TijdslotController : Controller
     {
         private readonly WdprPretparkDenhaagIdentityDbContext _context;
 
-        public AttractieController(WdprPretparkDenhaagIdentityDbContext context)
+        public TijdslotController(WdprPretparkDenhaagIdentityDbContext context)
         {
             _context = context;
         }
 
-        // GET: Attractie
+        // GET: Tijdslot
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Attracties.ToListAsync());
+            return View(await _context.Tijdsloten.ToListAsync());
         }
 
-        // GET: Attractie/Details/5
+        // GET: Tijdslot/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -33,40 +33,40 @@ namespace WdprPretparkDenhaag.Controllers
                 return NotFound();
             }
 
-            var attractie = await _context.Attracties
+            var tijdslot = await _context.Tijdsloten
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (attractie == null)
+            if (tijdslot == null)
             {
                 return NotFound();
             }
 
-            return View(attractie);
+            return View(tijdslot);
         }
 
-        // GET: Attractie/Create
+        // GET: Tijdslot/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Attractie/Create
+        // POST: Tijdslot/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naam,MinimaleLeeftijd,AngstFactor,Foto,MinimaleLengte,Prijs,AantalLikes,Inschrijfplicht,OpeningsTijd,SluitingsTijd,Reserveercapaciteit")] Attractie attractie)
+        public async Task<IActionResult> Create([Bind("Id,BeginTijd,EindTijd")] Tijdslot tijdslot)
         {
             if (ModelState.IsValid)
             {
-                attractie.Id = Guid.NewGuid();
-                _context.Add(attractie);
+                tijdslot.Id = Guid.NewGuid();
+                _context.Add(tijdslot);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(attractie);
+            return View(tijdslot);
         }
 
-        // GET: Attractie/Edit/5
+        // GET: Tijdslot/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -74,22 +74,22 @@ namespace WdprPretparkDenhaag.Controllers
                 return NotFound();
             }
 
-            var attractie = await _context.Attracties.FindAsync(id);
-            if (attractie == null)
+            var tijdslot = await _context.Tijdsloten.FindAsync(id);
+            if (tijdslot == null)
             {
                 return NotFound();
             }
-            return View(attractie);
+            return View(tijdslot);
         }
 
-        // POST: Attractie/Edit/5
+        // POST: Tijdslot/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Naam,MinimaleLeeftijd,AngstFactor,Foto,MinimaleLengte,Prijs,AantalLikes,Inschrijfplicht,OpeningsTijd,SluitingsTijd,Reserveercapaciteit")] Attractie attractie)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,BeginTijd,EindTijd")] Tijdslot tijdslot)
         {
-            if (id != attractie.Id)
+            if (id != tijdslot.Id)
             {
                 return NotFound();
             }
@@ -98,12 +98,12 @@ namespace WdprPretparkDenhaag.Controllers
             {
                 try
                 {
-                    _context.Update(attractie);
+                    _context.Update(tijdslot);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AttractieExists(attractie.Id))
+                    if (!TijdslotExists(tijdslot.Id))
                     {
                         return NotFound();
                     }
@@ -114,10 +114,10 @@ namespace WdprPretparkDenhaag.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(attractie);
+            return View(tijdslot);
         }
 
-        // GET: Attractie/Delete/5
+        // GET: Tijdslot/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -125,30 +125,30 @@ namespace WdprPretparkDenhaag.Controllers
                 return NotFound();
             }
 
-            var attractie = await _context.Attracties
+            var tijdslot = await _context.Tijdsloten
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (attractie == null)
+            if (tijdslot == null)
             {
                 return NotFound();
             }
 
-            return View(attractie);
+            return View(tijdslot);
         }
 
-        // POST: Attractie/Delete/5
+        // POST: Tijdslot/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var attractie = await _context.Attracties.FindAsync(id);
-            _context.Attracties.Remove(attractie);
+            var tijdslot = await _context.Tijdsloten.FindAsync(id);
+            _context.Tijdsloten.Remove(tijdslot);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AttractieExists(Guid id)
+        private bool TijdslotExists(Guid id)
         {
-            return _context.Attracties.Any(e => e.Id == id);
+            return _context.Tijdsloten.Any(e => e.Id == id);
         }
     }
 }

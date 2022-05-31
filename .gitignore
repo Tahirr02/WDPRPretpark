@@ -1,3 +1,6 @@
+Migrations/
+obj/Debug/
+bin/Debug/
 obj/Debug/net5.0/WdprPretparkDenhaag.pdb
 obj/Debug/net5.0/WdprPretparkDenhaag.dll
 obj/Debug/net5.0/WdprPretparkDenhaag.RazorCoreGenerate.cache
@@ -38,3 +41,18 @@ obj/Debug/net5.0/Razor/Views/Kaart/Index.cshtml.g.cs
 obj/Debug/net5.0/Razor/Views/Kaart/Index.cshtml.g.cs
 Migrations/20220531180746_initialmigration.cs
 Migrations/20220531180746_initialmigration.Designer.cs
+obj/Debug/net5.0/Razor/Views/Attractie/Create.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Attractie/Delete.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Attractie/Details.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Attractie/Edit.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Attractie/Index.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/PlanningItem/Create.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/PlanningItem/Delete.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/PlanningItem/Details.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/PlanningItem/Index.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/PlanningItem/Edit.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Tijdslot/Create.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Tijdslot/Delete.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Tijdslot/Details.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Tijdslot/Edit.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Tijdslot/Index.cshtml.g.cs

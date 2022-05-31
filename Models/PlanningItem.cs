@@ -9,5 +9,6 @@ namespace WdprPretparkDenhaag.Models
         public Guid PlanningId { get; set; }
         public Guid TijdSlotId { get; set; }
         public Guid AttractieId {get; set; }
+        public DateTime Dag {get; set;}
     }
 }
