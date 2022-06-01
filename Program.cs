@@ -32,17 +32,13 @@ namespace WdprPretparkDenhaag
                             roleManager1.CreateAsync(new IdentityRole(role)).Wait();
                 }
                 // GenereerAttracties();
-                              
-                //Dit is om tijdssloten aan te maken
-                    //GenereerTijdssloten();                      
-                                               
+                // GenereerTijdssloten();       
             }
             
-          builder.Run();
-                        
+          builder.Run();                        
         }
 
-        private static void GenereerAttracties()
+        private static void GenereerAttracties(IServiceScope scope)
         {
             Attractie attractie = new Attractie();
                 attractie.Naam = "Cycloon Achtbaan";
@@ -135,7 +131,7 @@ namespace WdprPretparkDenhaag
 
         }
 
-       private static void GenereerTijdssloten()
+       private static void GenereerTijdssloten(IServiceScope scope)
        {
              for (int i = 0; i < 36; i++)
                {
@@ -145,8 +141,6 @@ namespace WdprPretparkDenhaag
                     Tijdslot tijdslot = new Tijdslot();
                     tijdslot.BeginTijd = date.AddMinutes(minutes);
                     tijdslot.EindTijd = tijdslot.BeginTijd.AddMinutes(15);
-                    tijdslot.AantalMensen = 10;
-                    tijdslot.Duur = 15;
                     var dbcontext = scope.ServiceProvider.GetRequiredService<WdprPretparkDenhaagIdentityDbContext>();
                                         
                     dbcontext.Tijdsloten.Add(tijdslot);
