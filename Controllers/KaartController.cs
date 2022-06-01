@@ -36,15 +36,16 @@ namespace WdprPretparkDenhaag.Controllers
                 select p;
 
             // Haalt de planningsitems op die horen bij de betreffende planning
-             planningItems = planningItems.Where(planningItem => planningItem.PlanningId == Guid.Parse("D7433101-C93D-47D9-AECB-B2537BBDC23A"));
+            //  planningItems = planningItems.Where(planningItem => planningItem.PlanningId == Guid.Parse("D7433101-C93D-47D9-AECB-B2537BBDC23A"));
+             planningItems = planningItems.Where(planningItem => planningItem.PlanningId == Guid.Parse("09AE98DA-F970-4C9A-BEF5-190949078BD8"));
 
-            IEnumerable<PlanningItem> planningItem = _context.PlanningItems;
+            // IEnumerable<PlanningItem> planningItem = _context.PlanningItems;
 
             // maak een kaartview model aan die mee wordt gestuurd naar de kaartview
             KaartViewModel kaartViewModel = new KaartViewModel();
             kaartViewModel.Attracties = await attracties.ToListAsync();
             kaartViewModel.Tijdsloten = await _context.Tijdsloten.ToListAsync();
-            kaartViewModel.PlanningItems = planningItem;
+            kaartViewModel.PlanningItems = planningItems;
           
             // stuur de kaartviewmodel door naar de view          
             return View(kaartViewModel);
@@ -70,7 +71,8 @@ namespace WdprPretparkDenhaag.Controllers
                 planningItem.Id = Guid.NewGuid();
                 planningItem.AttractieId = Guid.Parse(attractieId);
                 planningItem.TijdSlotId = Guid.Parse(tijdslotId);
-                planningItem.PlanningId = Guid.Parse("D7433101-C93D-47D9-AECB-B2537BBDC23A");
+                //planningItem.PlanningId = Guid.Parse("D7433101-C93D-47D9-AECB-B2537BBDC23A");
+                planningItem.PlanningId = Guid.Parse("09AE98DA-F970-4C9A-BEF5-190949078BD8");
                 
                 //voeg de planningitem toe
                 _context.PlanningItems.Add(planningItem);
