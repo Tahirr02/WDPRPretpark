@@ -1,5 +1,3 @@
-
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,10 +19,5 @@ namespace WdprPretparkDenhaag.Models
         public DateTime OpeningsTijd { get; set; }
         public DateTime SluitingsTijd { get; set; }
         public int Reserveercapaciteit { get; set; }
-
-
-
-
     }
-
 }

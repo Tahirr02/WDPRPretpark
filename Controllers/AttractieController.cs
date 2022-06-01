@@ -13,7 +13,7 @@ namespace WdprPretparkDenhaag.Controllers
     public class AttractieController : Controller
     {
         private readonly WdprPretparkDenhaagIdentityDbContext _context;
-
+        
         public AttractieController(WdprPretparkDenhaagIdentityDbContext context)
         {
             _context = context;
