@@ -32,6 +32,12 @@ namespace WdprPretparkDenhaag.Controllers
             }
 
             ///haal alle planningitems op
+            var planningItems = from p in _context.PlanningItems
+                select p;
+
+            // Haalt de planningsitems op die horen bij de betreffende planning
+             planningItems = planningItems.Where(planningItem => planningItem.PlanningId == Guid.Parse("D7433101-C93D-47D9-AECB-B2537BBDC23A"));
+
             IEnumerable<PlanningItem> planningItem = _context.PlanningItems;
 
             // maak een kaartview model aan die mee wordt gestuurd naar de kaartview
