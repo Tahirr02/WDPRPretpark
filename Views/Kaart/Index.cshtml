@@ -13,61 +13,59 @@
 
 <h1>Kies een activiteit</h1>
 
-<table class="table">
+@* <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Attracties.FirstOrDefault().Naam)
-            </th>            
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Attracties) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Naam)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
-
-    @using (Html.BeginForm("VoegToe", "Kaart", FormMethod.Post))
-    {
-        @Html.DropDownList("AttractieId", new SelectList(Model.Attracties.Select(k => k.Id)), "Kies Attractie")
-        @Html.DropDownList("TijdslotId", new SelectList(Model.Tijdsloten.Select(k => k.Id)), "Kies Tijdslot")   
-
-        <input id="VoegToe" type="submit" value="Voeg planning item toe" />
-    }
-<h2>Huidige planning</h2>
-
-<table>
-    <thead>
-        <tr>
-            <th>Attractie</th>
-        </tr>
-        <tr>
-            <th>Tijdslot</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var item in Model.PlanningItems)
+        @foreach (var item in Model.Attracties)
         {
             <tr>
-                <td>                    
-                    @Html.DisplayFor(modelItem => item.AttractieId)
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naam)
                 </td>
-                <td>                    
-                    @Html.DisplayFor(modelItem => item.TijdSlotId)
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }
-    </tbody>    
+    </tbody>
+</table> *@
+
+@using (Html.BeginForm("VoegToe", "Kaart", FormMethod.Post))
+{
+    @Html.DropDownList("AttractieId", new SelectList(Model.Attracties.Select(k => k.Id)), "Kies Attractie")
+    @Html.DropDownList("TijdslotId", new SelectList(Model.Tijdsloten.Select(k => k.Id)), "Kies Tijdslot")
+
+    <input id="VoegToe" type="submit" value="Voeg planning item toe" />
+}
+<h2>Huidige planning</h2>
+
+<table>
+    <tr>
+
+        <th scope="col">Attractie</th>
+
+        <th scope="col">Tijdslot</th>
+    </tr>
+
+    @foreach (var item in Model.PlanningItems)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttractieId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TijdSlotId)
+            </td>
+        </tr>
+    }
 
 </table>
