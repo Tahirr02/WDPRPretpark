@@ -43,23 +43,20 @@ namespace WdprPretparkDenhaag
         {
              services.AddDbContext<WdprPretparkDenhaagIdentityDbContext>(options =>
                 options.UseSqlServer( Configuration.GetConnectionString("DefaultConnection")));
-                     services.AddDatabaseDeveloperPageExceptionFilter();
+                services.AddDatabaseDeveloperPageExceptionFilter();
 
            
             services.AddSignalR();
             
-services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                     .AddRoles<IdentityRole>()
-            .AddRoleManager<RoleManager<IdentityRole>>()
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                    .AddRoles<IdentityRole>()
+                    .AddRoleManager<RoleManager<IdentityRole>>()
                     .AddEntityFrameworkStores<WdprPretparkDenhaagIdentityDbContext>();
-            
             services.AddControllersWithViews();
-              services.AddTransient<IEmailSender, EmailSender>();
-          
-
-            // services.AddDatabaseDeveloperPageExceptionFilter();
             
-                     
+            services.AddTransient<IEmailSender, EmailSender>();
+          
+            // services.AddDatabaseDeveloperPageExceptionFilter();  
 
         }
 
@@ -91,6 +88,7 @@ services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfi
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                     endpoints.MapRazorPages();
+                endpoints.MapHub<NotifyHub>("/notifyhub");
             });
         }
     }

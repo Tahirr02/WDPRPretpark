@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using WdprPretparkDenhaag.Areas.Identity.Data;
 using WdprPretparkDenhaag.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.SignalR;
 
 namespace WdprPretparkDenhaag.Controllers
 {
@@ -14,9 +15,12 @@ namespace WdprPretparkDenhaag.Controllers
     {
         private readonly WdprPretparkDenhaagIdentityDbContext _context;
 
-        public KaartController(WdprPretparkDenhaagIdentityDbContext context)
+        private IHubContext<NotifyHub> _hubContext { get; }
+
+        public KaartController(WdprPretparkDenhaagIdentityDbContext context, IHubContext<NotifyHub> hubContext)
         {
             _context = context;
+            _hubContext = hubContext;
         }
 
         public async Task<IActionResult> Index(string attractieSearchString)
@@ -51,8 +55,67 @@ namespace WdprPretparkDenhaag.Controllers
             return View(kaartViewModel);
         }
 
+        public async Task<IActionResult> Details(Guid? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var attractie = await _context.Attracties
+                .SingleOrDefaultAsync(m => m.Id == id);
+            if (attractie == null)
+            {
+                return NotFound();
+            }
+
+            return View(attractie);
+        }
+
+        // Maak booking
+        [HttpPost]
+        public async Task<IActionResult> maakBooking(BookingViewmodel booking){
+            Guid attractieId = Guid.Parse(booking.AttractieId);
+
+            if(ModelState.IsValid){
+
+
+                var attractie = _context.Attracties.SingleOrDefault(a => a.Id == attractieId );
+
+                if((attractie.Reserveercapaciteit - attractie.Reservaties) == 0){
+                    return BadRequest("Reservatie is Vol");
+                }
+
+                attractie.Reservaties = attractie.Reservaties + booking.AantalPlekken;
+
+// ---------------------------------------------------
+                // Maak een planning item aan -> moet aangepast worden
+                PlanningItem planningItem = new PlanningItem();
+                planningItem.Id = Guid.NewGuid();
+                planningItem.AttractieId = attractieId;
+                // Random Id -> tijdelijk gebruikt
+                planningItem.TijdSlotId = Guid.NewGuid();
+                planningItem.PlanningId = Guid.NewGuid();
+                
+                //voeg de planningitem toe
+                var addition = _context.PlanningItems.Add(planningItem).Entity;
+// ----------------------------------------------------------
+
+                var result = _context.Update(attractie).Entity;
+                if(_context.SaveChanges() <= 0){
+                    return NotFound("Fout bij het Booken");
+                }
+
+                int beschikbaarPlekken = attractie.Reserveercapaciteit - attractie.Reservaties;
+                await _hubContext.Clients.All.SendAsync("ReceiveMessage", beschikbaarPlekken);
+                return Redirect("/kaart/index");
+            }
+            return Redirect("/kaart/details/"+ attractieId);
+        }
+
         
-        public async Task<IActionResult> VoegToe()
+        
+        public IActionResult VoegToe()
         {            
             return  RedirectToAction(nameof(Index));
         }

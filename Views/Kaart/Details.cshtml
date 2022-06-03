@@ -1,0 +1,58 @@
+@{
+    int beschikbaarPlekken = (Model.Reserveercapaciteit - Model.Reservaties);
+}
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="info col-md-7">
+            <img src="~/attractie.webp" class="col" alt="@Model.Naam">
+            <div class="social d-flex align-items-center m-2">
+                <span id="likes">@Model.AantalLikes </span> Likes
+                <button id="likeBtn" class="btn btn-primary ml-2">Like</button>
+            </div>
+            <h1>@Model.Naam</h1>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+                veniam in! Atque odio quod, accusantium assumenda quibusdam commodi voluptate quos?
+            </p>
+        </div>
+
+        <div class="book col-md-5">
+            <form asp-action="maakBooking" method="post">
+                <input type="text" name="AttractieId" value="@Model.Id" id="Id" hidden>
+                <div class="mb-3">
+                    <label for="Tijdslot" class="form-label">Tijdslot</label>
+                    <select id="TijdslotVak" class="form-control" name="Tijdslot" aria-label="tijdslot dropdown">
+                        <option selected>Selecteer tijdslot</option>
+                        <option value="1">tijdslot 1</option>
+                        <option value="2">tijdslot 2</option>
+                        <option value="3">tijdslot 3</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="AantalPlekken" class="form-label">Aantal Plekken</label>
+                    <input id="AantalPlekkenVak" type="number" name="AantalPlekken" class="form-control" min="1"
+                        max="@beschikbaarPlekken" value="1">
+                </div>
+                <div class="mb-3 d-flex flex-column">
+                    <label for="" class="form-label">Minimale Lengte: @Model.MinimaleLengte</label>
+                    <label for="" class="form-label">
+                        Beschikbaar plekken: <span id="plekkenInfo">@beschikbaarPlekken</span>
+                    </label>
+                    <label for="" class="form-label">Prijs: @Model.Prijs</label>
+                    <label for="" class="form-label">Total</label>
+                    <input type="number" name="Prijs" class="form-control" value="@(Model.Prijs)">
+                </div>
+                <button type="submit" id="bookBtn" class="btn btn-primary">Book</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/notify.js"></script>

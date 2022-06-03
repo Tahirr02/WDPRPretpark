@@ -1,2 +1,1 @@
-UPDATE AspNetUsers SET EmailConfirmed = 1
-    
+UPDATE Attracties SET Reservaties = 0;

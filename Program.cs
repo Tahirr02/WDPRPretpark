@@ -31,8 +31,8 @@ namespace WdprPretparkDenhaag
                         if (!roleManager1.RoleExistsAsync(role).Result)
                             roleManager1.CreateAsync(new IdentityRole(role)).Wait();
                 }
-                // GenereerAttracties();
-                // GenereerTijdssloten();       
+                //  GenereerAttracties(scope);
+                //  GenereerTijdssloten(scope);       
             }
             
           builder.Run();                        

@@ -5,22 +5,27 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using WdprPretparkDenhaag.Areas.Identity.Data;
 using WdprPretparkDenhaag.Models;
+
 
 namespace WdprPretparkDenhaag.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly WdprPretparkDenhaagIdentityDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, WdprPretparkDenhaagIdentityDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+           var attracties =  _context.Attracties;
+            return View(attracties);
         }
 
         public IActionResult Privacy()

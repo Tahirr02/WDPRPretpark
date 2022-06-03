@@ -252,6 +252,9 @@ namespace WdprPretparkDenhaag.Migrations
                     b.Property<double>("Prijs")
                         .HasColumnType("float");
 
+                    b.Property<int>("Reservaties")
+                        .HasColumnType("int");
+
                     b.Property<int>("Reserveercapaciteit")
                         .HasColumnType("int");
 
@@ -323,6 +326,8 @@ namespace WdprPretparkDenhaag.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AttractieId");
+
                     b.ToTable("PlanningItems");
                 });
 
@@ -392,6 +397,22 @@ namespace WdprPretparkDenhaag.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("WdprPretparkDenhaag.Models.PlanningItem", b =>
+                {
+                    b.HasOne("WdprPretparkDenhaag.Models.Attractie", "Attractie")
+                        .WithMany("planningItemsAttracties")
+                        .HasForeignKey("AttractieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Attractie");
+                });
+
+            modelBuilder.Entity("WdprPretparkDenhaag.Models.Attractie", b =>
+                {
+                    b.Navigation("planningItemsAttracties");
                 });
 #pragma warning restore 612, 618
         }

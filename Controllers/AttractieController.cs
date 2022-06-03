@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WdprPretparkDenhaag.Areas.Identity.Data;
@@ -10,13 +11,14 @@ using WdprPretparkDenhaag.Models;
 
 namespace WdprPretparkDenhaag.Controllers
 {
+    [Authorize(Roles= "Admin")]
     public class AttractieController : Controller
     {
         private readonly WdprPretparkDenhaagIdentityDbContext _context;
         
         public AttractieController(WdprPretparkDenhaagIdentityDbContext context)
         {
-            _context = context;
+           _context = context;
         }
 
         // GET: Attractie
