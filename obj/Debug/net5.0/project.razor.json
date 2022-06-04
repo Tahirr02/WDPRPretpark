@@ -15864,6 +15864,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Shared\\_NavbarPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_NavbarPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\PlanningItem\\Edit.cshtml",
       "TargetPath": "Views\\PlanningItem\\Edit.cshtml",
       "FileKind": "mvc"

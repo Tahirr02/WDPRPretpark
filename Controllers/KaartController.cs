@@ -8,6 +8,7 @@ using WdprPretparkDenhaag.Areas.Identity.Data;
 using WdprPretparkDenhaag.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WdprPretparkDenhaag.Controllers
 {
@@ -73,6 +74,7 @@ namespace WdprPretparkDenhaag.Controllers
         }
 
         // Maak booking
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> maakBooking(BookingViewmodel booking){
             Guid attractieId = Guid.Parse(booking.AttractieId);
