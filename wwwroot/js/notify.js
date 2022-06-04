@@ -4,7 +4,7 @@ const NotifyConnection = new signalR.HubConnectionBuilder().withUrl("/notifyhub"
 const attractieId = document.getElementById('Id').value;
 
 
-NotifyConnection.on("ReceiveMessage", (beschikbaarPlekken) => {
+NotifyConnection.on("ReceiveReservatie", (beschikbaarPlekken) => {
     document.getElementById("plekkenInfo").textContent = beschikbaarPlekken;
     checkDisable(beschikbaarPlekken);
 })
@@ -20,11 +20,22 @@ NotifyConnection.on("LoadPlekken", (beschikbaarPlekken) => {
 
 NotifyConnection.start().then(function () {
     NotifyConnection.invoke('getAvailable', attractieId)
+    let aantalPlekken = document.getElementById("AantalPlekkenVak").value
+    NotifyConnection.invoke("Reserveer", attractieId, aantalPlekken).catch( (err) => {
+        return console.error.apply(err.toString());
+    })
 }).catch(function (err) {
     return console.error(err.toString());
 });
 
-document.getElementById("likeBtn").addEventListener("click", (event) => {
+NotifyConnection.on("updateReservaties", () => {
+    let aantalPlekken = document.getElementById("AantalPlekkenVak").value
+    NotifyConnection.invoke("Reserveer", attractieId, aantalPlekken).catch( (err) => {
+        return console.error.apply(err.toString());
+    })
+})
+
+document.getElementById("likeBtn").addEventListener("click", () => {
     
     NotifyConnection.invoke("SendLike", attractieId).catch( (err) => {
         return console.error.apply(err.toString());
@@ -39,3 +50,5 @@ function checkDisable(beschikbaarPlekken){
         document.getElementById("TijdslotVak").disabled = true;
     }
 }
+
+// function checkDisable2()

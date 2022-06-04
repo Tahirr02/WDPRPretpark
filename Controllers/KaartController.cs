@@ -23,16 +23,16 @@ namespace WdprPretparkDenhaag.Controllers
             _hubContext = hubContext;
         }
 
-        public async Task<IActionResult> Index(string attractieSearchString)
+        public async Task<IActionResult> Index(string attractieNaam)
         {
             // haal de attracties op
             var attracties = from a in _context.Attracties
                 select a;
 
             // haal de attracties op die voldoen aan de filter van de searchbar
-            if (!string.IsNullOrEmpty(attractieSearchString))
+            if (!string.IsNullOrEmpty(attractieNaam))
             {
-                attracties = attracties.Where(attractie => attractie.Naam.Contains(attractieSearchString));
+                attracties = attracties.Where(attractie => attractie.Naam.Contains(attractieNaam));
             }
 
             ///haal alle planningitems op
@@ -79,35 +79,34 @@ namespace WdprPretparkDenhaag.Controllers
 
             if(ModelState.IsValid){
 
-
                 var attractie = _context.Attracties.SingleOrDefault(a => a.Id == attractieId );
 
                 if((attractie.Reserveercapaciteit - attractie.Reservaties) == 0){
                     return BadRequest("Reservatie is Vol");
                 }
-
-                attractie.Reservaties = attractie.Reservaties + booking.AantalPlekken;
-
 // ---------------------------------------------------
                 // Maak een planning item aan -> moet aangepast worden
                 PlanningItem planningItem = new PlanningItem();
                 planningItem.Id = Guid.NewGuid();
                 planningItem.AttractieId = attractieId;
-                // Random Id -> tijdelijk gebruikt
                 planningItem.TijdSlotId = Guid.NewGuid();
-                planningItem.PlanningId = Guid.NewGuid();
-                
-                //voeg de planningitem toe
-                var addition = _context.PlanningItems.Add(planningItem).Entity;
-// ----------------------------------------------------------
+                //planningItem.PlanningId = Guid.Parse("D7433101-C93D-47D9-AECB-B2537BBDC23A");
+                planningItem.PlanningId = Guid.Parse("09AE98DA-F970-4C9A-BEF5-190949078BD8");
 
+                _context.PlanningItems.Add(planningItem);
+// --------------------------------------------------------
+
+                // Update reservaties
+                attractie.Reservaties = attractie.Reservaties + booking.AantalPlekken;
                 var result = _context.Update(attractie).Entity;
-                if(_context.SaveChanges() <= 0){
-                    return NotFound("Fout bij het Booken");
-                }
 
+                // save
+                await _context.SaveChangesAsync();
+
+                // realtime update
                 int beschikbaarPlekken = attractie.Reserveercapaciteit - attractie.Reservaties;
-                await _hubContext.Clients.All.SendAsync("ReceiveMessage", beschikbaarPlekken);
+                await _hubContext.Clients.All.SendAsync("ReceiveReservatie", beschikbaarPlekken);
+
                 return Redirect("/kaart/index");
             }
             return Redirect("/kaart/details/"+ attractieId);

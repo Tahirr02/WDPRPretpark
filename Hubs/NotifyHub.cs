@@ -21,11 +21,19 @@ public class NotifyHub : Hub
     }
 
 
-    public async Task SendMessage(string attractieId)
+    // public async Task SendMessage(string attractieId)
+    // {
+    //     Guid Id = Guid.Parse(attractieId);
+    //     var capacity = _context.Attracties.SingleOrDefault(u => u.Id == Id).Reserveercapaciteit;
+    //     await Clients.All.SendAsync("ReceiveMessage", capacity);
+    // }
+
+    public async Task Reserveer(string attractieId, int aantalPlekken)
     {
         Guid Id = Guid.Parse(attractieId);
-        var capacity = _context.Attracties.SingleOrDefault(u => u.Id == Id).Reserveercapaciteit;
-        await Clients.All.SendAsync("ReceiveMessage", capacity);
+        var attractie = _context.Attracties.SingleOrDefault(u => u.Id == Id);
+        
+        await Clients.All.SendAsync("ReceiveReservatie", attractie.Reservaties);
     }
 
     public async Task SendLike(string attractieId){

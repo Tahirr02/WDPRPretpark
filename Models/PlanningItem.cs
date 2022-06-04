@@ -13,6 +13,7 @@ namespace WdprPretparkDenhaag.Models
         public Guid AttractieId {get; set; }
 
         public Attractie Attractie { get; set; }
+        public Tijdslot  tijdslot {get; set;}
 
     }
 }
