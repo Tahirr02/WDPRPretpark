@@ -1,1 +1,0 @@
-UPDATE Attracties SET RoleId = 'd8635023-ef4e-4d03-8ae2-a230c4828924';

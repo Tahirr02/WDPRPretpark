@@ -70,71 +70,6 @@ namespace WdprPretparkDenhaag.Migrations
                     b.ToTable("AspNetRoleClaims");
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -219,6 +154,76 @@ namespace WdprPretparkDenhaag.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("WdprPretparkDenhaag.Models.ApplicationUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BezoekerId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BezoekerId");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers");
+                });
+
             modelBuilder.Entity("WdprPretparkDenhaag.Models.Attractie", b =>
                 {
                     b.Property<Guid>("Id")
@@ -230,6 +235,9 @@ namespace WdprPretparkDenhaag.Migrations
 
                     b.Property<int>("AngstFactor")
                         .HasColumnType("int");
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Foto")
                         .HasColumnType("nvarchar(max)");
@@ -263,6 +271,8 @@ namespace WdprPretparkDenhaag.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ApplicationUserId");
+
                     b.ToTable("Attracties");
                 });
 
@@ -275,13 +285,21 @@ namespace WdprPretparkDenhaag.Migrations
                     b.Property<string>("Achternaam")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Leeftijd")
+                        .HasColumnType("int");
 
                     b.Property<string>("Voornaam")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
 
                     b.ToTable("Bezoekers");
                 });
@@ -291,6 +309,9 @@ namespace WdprPretparkDenhaag.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<Guid>("BezoekersId")
                         .HasColumnType("uniqueidentifier");
@@ -302,6 +323,8 @@ namespace WdprPretparkDenhaag.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
 
                     b.ToTable("Planningen");
                 });
@@ -328,6 +351,8 @@ namespace WdprPretparkDenhaag.Migrations
 
                     b.HasIndex("AttractieId");
 
+                    b.HasIndex("TijdSlotId");
+
                     b.ToTable("PlanningItems");
                 });
 
@@ -337,6 +362,9 @@ namespace WdprPretparkDenhaag.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("BeginTijd")
                         .HasColumnType("datetime2");
 
@@ -344,6 +372,8 @@ namespace WdprPretparkDenhaag.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
 
                     b.ToTable("Tijdsloten");
                 });
@@ -359,7 +389,7 @@ namespace WdprPretparkDenhaag.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("WdprPretparkDenhaag.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -368,7 +398,7 @@ namespace WdprPretparkDenhaag.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("WdprPretparkDenhaag.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -383,7 +413,7 @@ namespace WdprPretparkDenhaag.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("WdprPretparkDenhaag.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -392,11 +422,41 @@ namespace WdprPretparkDenhaag.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("WdprPretparkDenhaag.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("WdprPretparkDenhaag.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("WdprPretparkDenhaag.Models.ApplicationUser", "Bezoeker")
+                        .WithMany()
+                        .HasForeignKey("BezoekerId");
+
+                    b.Navigation("Bezoeker");
+                });
+
+            modelBuilder.Entity("WdprPretparkDenhaag.Models.Attractie", b =>
+                {
+                    b.HasOne("WdprPretparkDenhaag.Models.ApplicationUser", null)
+                        .WithMany("Attracties")
+                        .HasForeignKey("ApplicationUserId");
+                });
+
+            modelBuilder.Entity("WdprPretparkDenhaag.Models.Bezoeker", b =>
+                {
+                    b.HasOne("WdprPretparkDenhaag.Models.ApplicationUser", null)
+                        .WithMany("Bezoekers")
+                        .HasForeignKey("ApplicationUserId");
+                });
+
+            modelBuilder.Entity("WdprPretparkDenhaag.Models.Planning", b =>
+                {
+                    b.HasOne("WdprPretparkDenhaag.Models.ApplicationUser", null)
+                        .WithMany("Planningen")
+                        .HasForeignKey("ApplicationUserId");
                 });
 
             modelBuilder.Entity("WdprPretparkDenhaag.Models.PlanningItem", b =>
@@ -407,7 +467,33 @@ namespace WdprPretparkDenhaag.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("WdprPretparkDenhaag.Models.Tijdslot", "tijdslot")
+                        .WithMany()
+                        .HasForeignKey("TijdSlotId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Attractie");
+
+                    b.Navigation("tijdslot");
+                });
+
+            modelBuilder.Entity("WdprPretparkDenhaag.Models.Tijdslot", b =>
+                {
+                    b.HasOne("WdprPretparkDenhaag.Models.ApplicationUser", null)
+                        .WithMany("Tijdsloten")
+                        .HasForeignKey("ApplicationUserId");
+                });
+
+            modelBuilder.Entity("WdprPretparkDenhaag.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("Attracties");
+
+                    b.Navigation("Bezoekers");
+
+                    b.Navigation("Planningen");
+
+                    b.Navigation("Tijdsloten");
                 });
 
             modelBuilder.Entity("WdprPretparkDenhaag.Models.Attractie", b =>

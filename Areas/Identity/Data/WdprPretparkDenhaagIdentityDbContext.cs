@@ -9,7 +9,7 @@ using WdprPretparkDenhaag.Models;
 
 namespace WdprPretparkDenhaag.Areas.Identity.Data
 {
-    public class WdprPretparkDenhaagIdentityDbContext : IdentityDbContext<IdentityUser>
+    public class WdprPretparkDenhaagIdentityDbContext : IdentityDbContext<ApplicationUser>
     {
 
         public DbSet<Attractie> Attracties { get; set; }

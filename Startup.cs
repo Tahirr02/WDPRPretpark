@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WdprPretparkDenhaag.Areas.Identity.Data;
+using WdprPretparkDenhaag.Models;
 
 namespace WdprPretparkDenhaag
 {
@@ -37,7 +38,7 @@ namespace WdprPretparkDenhaag
             services.AddSignalR();
 
             services
-                .AddDefaultIdentity<IdentityUser>(options =>
+                .AddDefaultIdentity<ApplicationUser>(options =>
                 {
                     options.SignIn.RequireConfirmedAccount = false;
                     options.SignIn.RequireConfirmedEmail = false;

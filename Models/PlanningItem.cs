@@ -11,7 +11,6 @@ namespace WdprPretparkDenhaag.Models
         public DateTime Dag {get; set;}
 
         public Guid AttractieId {get; set; }
-
         public Attractie Attractie { get; set; }
         public Tijdslot  tijdslot {get; set;}
 
