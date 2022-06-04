@@ -1,18 +1,3 @@
 {
-    "sqltools.connections": [
-        {
-            "mssqlOptions": {
-                "appName": "SQLTools",
-                "useUTC": true,
-                "encrypt": true
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 1433,
-            "askForPassword": true,
-            "driver": "MSSQL",
-            "name": "1234WDPR",
-            "connectString": "workstation id=1234WDPR.mssql.somee.com;packet size=4096;user id=Starace_SQLLogin_1;pwd=aa46wod9mi;data source=1234WDPR.mssql.somee.com;persist security info=False;initial catalog=1234WDPR"
-        }
-    ]
+    "sqltools.connections": []
 }

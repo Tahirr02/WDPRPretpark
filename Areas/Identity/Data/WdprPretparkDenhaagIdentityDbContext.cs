@@ -17,6 +17,8 @@ namespace WdprPretparkDenhaag.Areas.Identity.Data
         public DbSet<Planning> Planningen { get; set; }
         public DbSet<Tijdslot> Tijdsloten { get; set; }
         public DbSet<PlanningItem> PlanningItems {get; set;}
+
+
         public WdprPretparkDenhaagIdentityDbContext(DbContextOptions<WdprPretparkDenhaagIdentityDbContext> options)
             : base(options)
         {
@@ -28,6 +30,13 @@ namespace WdprPretparkDenhaag.Areas.Identity.Data
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
+            builder.Entity<ApplicationUser>().HasMany(p => p.PlanningItems).WithOne(u => u.User);
+
+            builder.Entity<PlanningItem>().HasOne(u => u.Tijdslot).WithMany(u => u.PlanningItem);
+            builder.Entity<PlanningItem>().HasOne(u => u.User).WithMany(u => u.PlanningItems);
+
+            builder.Entity<Tijdslot>().HasMany(u => u.PlanningItem).WithOne(u => u.Tijdslot);
+
         }
     }
 }

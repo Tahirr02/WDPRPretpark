@@ -31,7 +31,7 @@ namespace WdprPretparkDenhaag
             services
                 .AddDbContext<WdprPretparkDenhaagIdentityDbContext>(options =>
                     options
-                        .UseSqlServer(Configuration
+                        .UseSqlite(Configuration
                             .GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
