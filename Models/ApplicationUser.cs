@@ -9,6 +9,10 @@ namespace WdprPretparkDenhaag.Models
 {
     public class ApplicationUser : IdentityUser
     {
+        public string Voornaam { get; set; }
+        public string Achternaam { get; set; }      
+        public int Leeftijd { get; set; }
+
         public ICollection<Attractie> Attracties { get; set; }
         public ICollection<Bezoeker> Bezoekers { get; set; }
         public ICollection<Planning> Planningen { get; set; }

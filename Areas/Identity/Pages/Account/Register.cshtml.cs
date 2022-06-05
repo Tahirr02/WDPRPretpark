@@ -56,6 +56,19 @@ namespace WdprPretparkDenhaag.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
+            [Display(Name = "Voornaam")]
+            public string Voornaam { get; set; }
+
+            [Required]
+            [Display(Name = "Achternaam")]
+            public string Achternaam { get; set; }
+
+            [Required]
+            [Display(Name = "Leeftijd")]
+            public int Leeftijd { get; set; }
+            
+
+            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -79,19 +92,13 @@ namespace WdprPretparkDenhaag.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-               
-                //var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email };
-                //var result = await _userManager.CreateAsync(user, Input.Password);
-                //if (result.Succeeded)
-
-                //{
                     
-                     //var bezoeker = await _userManager.FindByIdAsync(Input.BezoekerId);
-                     var client = new ApplicationUser{
+                    var client = new ApplicationUser{
                     UserName = Input.Email,
-                    Email = Input.Email//,
-                    //id = "34343434"
-                    //Bezoeker = bezoeker
+                    Email = Input.Email,
+                    Voornaam = Input.Voornaam,
+                    Achternaam = Input.Achternaam,
+                    Leeftijd = Input.Leeftijd
                     };
                     
                     var result = await _userManager.CreateAsync(client, Input.Password);
@@ -121,7 +128,6 @@ namespace WdprPretparkDenhaag.Areas.Identity.Pages.Account
                         await _signInManager.SignInAsync(client, isPersistent: false);
                         return LocalRedirect(returnUrl);
                     }
-                //}
                
                     }
                      foreach (var error in result.Errors)

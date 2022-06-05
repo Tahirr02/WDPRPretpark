@@ -3,6 +3,13 @@
 const NotifyConnection = new signalR.HubConnectionBuilder().withUrl("/notifyhub").build();
 const attractieId = document.getElementById('Id').value;
 
+document.getElementById("AantalPlekkenVak").addEventListener("input", e => {
+    document.getElementById("Prijs").textContent = "";
+    let prijs = parseInt(document.getElementById("AttractiePrijs").value) * parseInt(e.target.value);
+    console.log(prijs)
+    console.log(typeof parseInt(e.target.value))
+    document.getElementById("Prijs").textContent = prijs;
+})
 
 NotifyConnection.on("ReceiveReservatie", (beschikbaarPlekken) => {
     document.getElementById("plekkenInfo").textContent = beschikbaarPlekken;

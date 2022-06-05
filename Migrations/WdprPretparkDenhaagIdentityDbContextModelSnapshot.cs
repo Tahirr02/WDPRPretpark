@@ -156,6 +156,9 @@ namespace WdprPretparkDenhaag.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Achternaam")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("BezoekerId")
                         .HasColumnType("TEXT");
 
@@ -168,6 +171,9 @@ namespace WdprPretparkDenhaag.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Leeftijd")
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("LockoutEnabled")
@@ -201,6 +207,9 @@ namespace WdprPretparkDenhaag.Migrations
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Voornaam")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -336,6 +345,9 @@ namespace WdprPretparkDenhaag.Migrations
 
                     b.Property<Guid>("PlanningId")
                         .HasColumnType("TEXT");
+
+                    b.Property<double>("Prijs")
+                        .HasColumnType("REAL");
 
                     b.Property<Guid>("TijdSlotId")
                         .HasColumnType("TEXT");

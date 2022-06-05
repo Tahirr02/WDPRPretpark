@@ -85,31 +85,40 @@ namespace WdprPretparkDenhaag.Controllers
                 return NotFound();
             }
 
-            var AttractieViewModel = new AttractieViewModel()
-            {
-                Attractie = attractie,
-                Tijdsloten = await _context.Tijdsloten.ToListAsync()
-            };
+            var AttractieViewModel =
+                new AttractieViewModel()
+                {
+                    Attractie = attractie,
+                    Tijdsloten = await _context.Tijdsloten.ToListAsync()
+                };
 
-            return View(AttractieViewModel);
+            ViewData["Attractie"] = AttractieViewModel;
+
+            return View();
         }
 
         // Maak booking
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> maakBooking(BookingViewmodel booking)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult>
+        maakBooking(
+            [Bind("AttractieId,Tijdslot,AantalPlekken")]
+            BookingViewmodel booking
+        )
         {
             Guid attractieId = Guid.Parse(booking.AttractieId);
-
+            var user = await _userManager.GetUserAsync(User);
+            var attractie =_context.Attracties.SingleOrDefault(a => a.Id == attractieId);
+            
             if (ModelState.IsValid)
             {
-                var attractie =
-                    _context
-                        .Attracties
-                        .SingleOrDefault(a => a.Id == attractieId);
+                if(user.Leeftijd < attractie.MinimaleLeeftijd)
+                {
+                    return BadRequest("Bezoeker is te jong");
+                }
 
-                if ((attractie.Reserveercapaciteit - attractie.Reservaties) == 0
-                )
+                if ((attractie.Reserveercapaciteit - attractie.Reservaties) == 0)
                 {
                     return BadRequest("Reservatie is Vol");
                 }
@@ -121,19 +130,10 @@ namespace WdprPretparkDenhaag.Controllers
 
                 // Maak een planning item aan -> moet aangepast worden
                 PlanningItem planningItem = new PlanningItem();
-                // planningItem.Id = Guid.NewGuid();
                 planningItem.AttractieId = attractieId;
+                planningItem.Prijs = booking.AantalPlekken * attractie.Prijs;
                 planningItem.TijdSlotId = Guid.Parse(booking.Tijdslot);
-
-                //planningItem.PlanningId = Guid.Parse("D7433101-C93D-47D9-AECB-B2537BBDC23A");
-                // planningItem.PlanningId =
-                //     Guid.Parse("09AE98DA-F970-4C9A-BEF5-190949078BD8");
-
-                var user = await _userManager.GetUserAsync(User);
-
-                user.PlanningItems.Add(planningItem);
-
-                // _context.PlanningItems.Add(planningItem);
+                user.PlanningItems.Add (planningItem);
                 // save
                 await _context.SaveChangesAsync();
 
