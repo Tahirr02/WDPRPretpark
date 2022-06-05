@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\WdprPretparkDenhaag.csproj",
+  "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\WdprPretparkDenhaag.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,383 +15619,383 @@
   "RootNamespace": "WdprPretparkDenhaag",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Planning\\Index.cshtml",
-      "TargetPath": "Views\\Planning\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Attractie\\Index.cshtml",
-      "TargetPath": "Views\\Attractie\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Shared\\_NavbarPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_NavbarPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Attractie\\Delete.cshtml",
-      "TargetPath": "Views\\Attractie\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Kaart\\Index.cshtml",
-      "TargetPath": "Views\\Kaart\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\Disable2fa.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Disable2fa.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Bezoeker\\Details.cshtml",
-      "TargetPath": "Views\\Bezoeker\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\PlanningItem\\Index.cshtml",
-      "TargetPath": "Views\\PlanningItem\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Planning\\Create.cshtml",
-      "TargetPath": "Views\\Planning\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Bezoeker\\Create.cshtml",
-      "TargetPath": "Views\\Bezoeker\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Error.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Tijdslot\\Index.cshtml",
-      "TargetPath": "Views\\Tijdslot\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Planning\\Details.cshtml",
-      "TargetPath": "Views\\Planning\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Bezoeker\\Index.cshtml",
-      "TargetPath": "Views\\Bezoeker\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\PlanningItem\\Create.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\PlanningItem\\Create.cshtml",
       "TargetPath": "Views\\PlanningItem\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Attractie\\Edit.cshtml",
-      "TargetPath": "Views\\Attractie\\Edit.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\Disable2fa.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Disable2fa.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Error.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Tijdslot\\Index.cshtml",
+      "TargetPath": "Views\\Tijdslot\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Kaart\\Details.cshtml",
-      "TargetPath": "Views\\Kaart\\Details.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Planning\\Index.cshtml",
+      "TargetPath": "Views\\Planning\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Tijdslot\\Details.cshtml",
-      "TargetPath": "Views\\Tijdslot\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Planning\\Delete.cshtml",
-      "TargetPath": "Views\\Planning\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Attractie\\Create.cshtml",
-      "TargetPath": "Views\\Attractie\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Tijdslot\\Edit.cshtml",
-      "TargetPath": "Views\\Tijdslot\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\PlanningItem\\Details.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\PlanningItem\\Details.cshtml",
       "TargetPath": "Views\\PlanningItem\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Planning\\Edit.cshtml",
-      "TargetPath": "Views\\Planning\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Bezoeker\\Delete.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Bezoeker\\Delete.cshtml",
       "TargetPath": "Views\\Bezoeker\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Planning\\Create.cshtml",
+      "TargetPath": "Views\\Planning\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Attractie\\Edit.cshtml",
+      "TargetPath": "Views\\Attractie\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Planning\\Edit.cshtml",
+      "TargetPath": "Views\\Planning\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\PlanningItem\\Delete.cshtml",
-      "TargetPath": "Views\\PlanningItem\\Delete.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Bezoeker\\Create.cshtml",
+      "TargetPath": "Views\\Bezoeker\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Bezoeker\\Edit.cshtml",
-      "TargetPath": "Views\\Bezoeker\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Tijdslot\\Create.cshtml",
-      "TargetPath": "Views\\Tijdslot\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Shared\\_LoginPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Attractie\\Details.cshtml",
-      "TargetPath": "Views\\Attractie\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Tijdslot\\Delete.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Attractie\\Delete.cshtml",
+      "TargetPath": "Views\\Attractie\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\PlanningItem\\Index.cshtml",
+      "TargetPath": "Views\\PlanningItem\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Tijdslot\\Delete.cshtml",
       "TargetPath": "Views\\Tijdslot\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\PlanningItem\\Edit.cshtml",
-      "TargetPath": "Views\\PlanningItem\\Edit.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Planning\\Details.cshtml",
+      "TargetPath": "Views\\Planning\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Kaart\\Index.cshtml",
+      "TargetPath": "Views\\Kaart\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DeletePersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWith2fa.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ResetAuthenticator.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Tijdslot\\Edit.cshtml",
+      "TargetPath": "Views\\Tijdslot\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Shared\\_LoginPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Bezoeker\\Index.cshtml",
+      "TargetPath": "Views\\Bezoeker\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Attractie\\Index.cshtml",
+      "TargetPath": "Views\\Attractie\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\DownloadPersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Attractie\\Details.cshtml",
+      "TargetPath": "Views\\Attractie\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\LoginWithRecoveryCode.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ExternalLogins.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Shared\\_NavbarPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_NavbarPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\PlanningItem\\Edit.cshtml",
+      "TargetPath": "Views\\PlanningItem\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Bezoeker\\Details.cshtml",
+      "TargetPath": "Views\\Bezoeker\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Tijdslot\\Details.cshtml",
+      "TargetPath": "Views\\Tijdslot\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Bezoeker\\Edit.cshtml",
+      "TargetPath": "Views\\Bezoeker\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Kaart\\Details.cshtml",
+      "TargetPath": "Views\\Kaart\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Tijdslot\\Create.cshtml",
+      "TargetPath": "Views\\Tijdslot\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\PlanningItem\\Delete.cshtml",
+      "TargetPath": "Views\\PlanningItem\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Planning\\Delete.cshtml",
+      "TargetPath": "Views\\Planning\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\Attractie\\Create.cshtml",
+      "TargetPath": "Views\\Attractie\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tahir\\OneDrive\\Bureaublad\\WdprPretparkDenhaag\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     }
   ],
