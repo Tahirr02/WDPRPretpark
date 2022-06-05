@@ -4,10 +4,11 @@ const NotifyConnection = new signalR.HubConnectionBuilder().withUrl("/notifyhub"
 const attractieId = document.getElementById('Id').value;
 
 document.getElementById("AantalPlekkenVak").addEventListener("input", e => {
-    document.getElementById("Prijs").textContent = "";
-    let prijs = parseInt(document.getElementById("AttractiePrijs").value) * parseInt(e.target.value);
-    console.log(prijs)
-    console.log(typeof parseInt(e.target.value))
+    let aantalPlekken = 0;
+    if(e.target.value != ""){
+        aantalPlekken = parseInt(e.target.value);
+    }
+    let prijs = parseInt(document.getElementById("AttractiePrijs").textContent) * aantalPlekken;
     document.getElementById("Prijs").textContent = prijs;
 })
 

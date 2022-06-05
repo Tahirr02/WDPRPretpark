@@ -34,38 +34,31 @@ namespace WdprPretparkDenhaag.Controllers
 
         public async Task<IActionResult> Index(string attractieNaam)
         {
+            var user = await _userManager.GetUserAsync(User);
+
             // haal de attracties op
             var attracties = from a in _context.Attracties select a;
+
+            // Haal planningitems 
+            var planningItems = _context.PlanningItems.Where(u => u.UserId == user.Id);
+
 
             // haal de attracties op die voldoen aan de filter van de searchbar
             if (!string.IsNullOrEmpty(attractieNaam))
             {
-                attracties =
-                    attracties
-                        .Where(attractie =>
-                            attractie.Naam.Contains(attractieNaam));
+                attracties = attracties.
+                                Where(attractie => attractie.Naam.Contains(attractieNaam));
+
+                planningItems = planningItems.
+                                    Where(u => u.Attractie.Naam.Contains(attractieNaam));
             }
-
-            ///haal alle planningitems op
-            var planningItems = from p in _context.PlanningItems select p;
-
-            // Haalt de planningsitems op die horen bij de betreffende planning
-            //  planningItems = planningItems.Where(planningItem => planningItem.PlanningId == Guid.Parse("D7433101-C93D-47D9-AECB-B2537BBDC23A"));
-            planningItems =
-                planningItems
-                    .Where(planningItem =>
-                        planningItem.PlanningId ==
-                        Guid.Parse("09AE98DA-F970-4C9A-BEF5-190949078BD8"));
-
-            var user = await _userManager.GetUserAsync(User);
-            var items = _context.PlanningItems.Where(u => u.UserId == user.Id);
 
             // IEnumerable<PlanningItem> planningItem = _context.PlanningItems;
             // maak een kaartview model aan die mee wordt gestuurd naar de kaartview
             KaartViewModel kaartViewModel = new KaartViewModel();
             kaartViewModel.Attracties = await attracties.ToListAsync();
             kaartViewModel.Tijdsloten = await _context.Tijdsloten.ToListAsync();
-            kaartViewModel.PlanningItems = items;
+            kaartViewModel.PlanningItems = planningItems;
 
             // stuur de kaartviewmodel door naar de view
             return View(kaartViewModel);
@@ -109,11 +102,11 @@ namespace WdprPretparkDenhaag.Controllers
         {
             Guid attractieId = Guid.Parse(booking.AttractieId);
             var user = await _userManager.GetUserAsync(User);
-            var attractie =_context.Attracties.SingleOrDefault(a => a.Id == attractieId);
-            
+            var attractie = _context.Attracties.SingleOrDefault(a => a.Id == attractieId);
+
             if (ModelState.IsValid)
             {
-                if(user.Leeftijd < attractie.MinimaleLeeftijd)
+                if (user.Leeftijd < attractie.MinimaleLeeftijd)
                 {
                     return BadRequest("Bezoeker is te jong");
                 }
@@ -131,58 +124,20 @@ namespace WdprPretparkDenhaag.Controllers
                 // Maak een planning item aan -> moet aangepast worden
                 PlanningItem planningItem = new PlanningItem();
                 planningItem.AttractieId = attractieId;
+                planningItem.AantalPlekken = booking.AantalPlekken;
                 planningItem.Prijs = booking.AantalPlekken * attractie.Prijs;
                 planningItem.TijdSlotId = Guid.Parse(booking.Tijdslot);
-                user.PlanningItems.Add (planningItem);
-                // save
+                user.PlanningItems.Add(planningItem);
+
                 await _context.SaveChangesAsync();
 
-                // realtime update
-                int beschikbaarPlekken =
-                    attractie.Reserveercapaciteit - attractie.Reservaties;
-                await _hubContext
-                    .Clients
-                    .All
-                    .SendAsync("ReceiveReservatie", beschikbaarPlekken);
+                // realtime update request
+                int beschikbaarPlekken = attractie.Reserveercapaciteit - attractie.Reservaties;
+                await _hubContext.Clients.All.SendAsync("ReceiveReservatie", beschikbaarPlekken);
 
                 return Redirect("/kaart/index");
             }
             return Redirect("/kaart/details/" + attractieId);
-        }
-
-        public IActionResult VoegToe()
-        {
-            return RedirectToAction(nameof(Index));
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> VoegToe(IFormCollection form)
-        {
-            if (ModelState.IsValid)
-            {
-                // Haal de geselecteerde waarde uit de view
-                string tijdslotId = form["TijdslotId"].ToString();
-                string attractieId = form["AttractieId"].ToString();
-
-                // maak een planning item aan
-                PlanningItem planningItem = new PlanningItem();
-                planningItem.Id = Guid.NewGuid();
-                planningItem.AttractieId = Guid.Parse(attractieId);
-                planningItem.TijdSlotId = Guid.Parse(tijdslotId);
-
-                //planningItem.PlanningId = Guid.Parse("D7433101-C93D-47D9-AECB-B2537BBDC23A");
-                planningItem.PlanningId =
-                    Guid.Parse("09AE98DA-F970-4C9A-BEF5-190949078BD8");
-
-                //voeg de planningitem toe
-                _context.PlanningItems.Add (planningItem);
-
-                //sla de planningitem op in de database
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-
-            return View();
         }
     }
 }

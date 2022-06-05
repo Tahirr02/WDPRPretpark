@@ -337,6 +337,9 @@ namespace WdprPretparkDenhaag.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("AantalPlekken")
+                        .HasColumnType("INTEGER");
+
                     b.Property<Guid>("AttractieId")
                         .HasColumnType("TEXT");
 
