@@ -15684,11 +15684,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Bezoeker\\Details.cshtml",
-      "TargetPath": "Views\\Bezoeker\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
       "FileKind": "mvc"
@@ -15701,11 +15696,6 @@
     {
       "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Planning\\Create.cshtml",
       "TargetPath": "Views\\Planning\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Bezoeker\\Create.cshtml",
-      "TargetPath": "Views\\Bezoeker\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15761,11 +15751,6 @@
     {
       "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Planning\\Details.cshtml",
       "TargetPath": "Views\\Planning\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Bezoeker\\Index.cshtml",
-      "TargetPath": "Views\\Bezoeker\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15879,11 +15864,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Bezoeker\\Delete.cshtml",
-      "TargetPath": "Views\\Bezoeker\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
       "FileKind": "mvc"
@@ -15901,11 +15881,6 @@
     {
       "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\PlanningItem\\Delete.cshtml",
       "TargetPath": "Views\\PlanningItem\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Keko\\Desktop\\School\\Year 2\\Webprogramming, Frameworks & Usability\\project\\WdprPretparkDenhaag\\Views\\Bezoeker\\Edit.cshtml",
-      "TargetPath": "Views\\Bezoeker\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
